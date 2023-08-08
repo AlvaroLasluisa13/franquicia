@@ -1,18 +1,18 @@
 <?php
 
-class Estadoss extends CI_Controller
+class Nuevos extends CI_Controller
 {
 
   function __construct()
   {
     parent::__construct();
-    $this->load->model("Estado");
+    $this->load->model("Nuevo");
   }
   public function direccion()
   {
-    $data["estadoss"]=$this->Estado->obtenerTodosEstado();
+    $data["nuevos"]=$this->Nuevo->obtenerTodosNuevo();
     $this->load->view('header');
-    $this->load->view('estadoss/direccion',$data);
+    $this->load->view('nuevos/direccion',$data);
     $this->load->view('footer');
   }
 }

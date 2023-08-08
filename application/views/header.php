@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Fedex - Tu compañia</title>
+    <title>KFC</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -35,7 +35,7 @@
     <link href="<?php echo base_url(); ?>plantilla/css/style.css" rel="stylesheet">
 </head>
 
-<body  style="background-image: url('<?php echo base_url("assets/imagen/logo.gif"); ?>')";
+<body)";
             background-size: cover;
             background-repeat: no-repeat;>
     <!-- Spinner Start -->
@@ -55,7 +55,7 @@
                 </div>
                 <div class="h-100 d-inline-flex align-items-center">
                     <span class="far fa-envelope me-2"></span>
-                    <span>fedex_usuarios@fedex.com</span>
+                    <span>usuarios@KFC.com</span>
                 </div>
             </div>
             <div class="col-lg-5 px-5 text-end">
@@ -82,34 +82,26 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="<?php echo site_url();?>/welcome/nosotros" class="nav-item nav-link active">NOSOTROS</a>
+
                 <!-- <a href="about.html" class="nav-item nav-link">About</a> -->
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">SUCURSALES</a>
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">REPORTE</a>
                     <div class="dropdown-menu bg-light m-0">
                         <a href="<?php echo site_url(); ?>/sucursales/direcciones" class="dropdown-item">REPORTE GENERAL</a>
-                        <a href="<?php echo site_url(); ?>/ecuadores/direccion" class="dropdown-item">REPORTE SUCURSAL 1</a>
-                        <a href="<?php echo site_url(); ?>/espanas/direccion" class="dropdown-item">REPORTE SUCURSAL 2</a>
-                        <a href="<?php echo site_url(); ?>/estadoss/direccion" class="dropdown-item">REPORTE SUCURSAL 3</a>
-                        <a href="<?php echo site_url(); ?>/colombias/direccion" class="dropdown-item">REPORTE SUCURSAL 4</a>
-                        <a href="<?php echo site_url(); ?>/panamas/direccion" class="dropdown-item">REPORTE SUCURSAL 5</a>
+                        <a href="<?php echo site_url(); ?>/nuevos/direccion" class="dropdown-item">REPORTE NUEVOS</a>
+                        <a href="<?php echo site_url(); ?>/antiguos/direccion" class="dropdown-item">REPORTE ANTIGUOs</a>
                     </div>
                 </div>
                 <!-- <a href="<?php echo site_url();?>/sucursales/direcciones" class="nav-item nav-link">SUCURSALES</a> -->
                 <!-- <a href="project.html" class="nav-item nav-link">Projects</a> -->
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">CLIENTES</a>
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">FRANQUICIAS</a>
                     <div class="dropdown-menu bg-light m-0">
-                        <a href="<?php echo site_url(); ?>/clientes/nuevo" class="dropdown-item">NUEVO</a>
-                        <a href="<?php echo site_url(); ?>/clientes/index" class="dropdown-item">LISTADO DE CLIENTES</a>
+                        <a href="<?php echo site_url(); ?>/franquicias/nuevo" class="dropdown-item">NUEVO</a>
+                        <a href="<?php echo site_url(); ?>/franquicias/index" class="dropdown-item">LISTADO DE CLIENTES</a>
                     </div>
                 </div>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">ENTREGAS</a>
-                    <div class="dropdown-menu bg-light m-0">
-                        <a href="<?php echo site_url(); ?>/destinos/nuevo" class="dropdown-item">NUEVO</a>
-                        <a href="<?php echo site_url(); ?>/destinos/index" class="dropdown-item">RUTA DE ENTREGAS</a>
-                    </div>
+               -->
                 </div>
                 <!-- <a href="contact.html" class="nav-item nav-link">Contact</a> -->
             </div>

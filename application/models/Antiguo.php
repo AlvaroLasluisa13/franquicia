@@ -1,12 +1,12 @@
 <?php
-    class Colombia extends CI_Model{
+    class Antiguo extends CI_Model{
         function __construct()
         {
             parent::__construct();
         }
-        function obtenerTodosColombia(){
+        function obtenerTodosAntiguo(){
 
-            $ListadosDirecciones=$this->db->select()->where('sucursal_cli', 'Colombia')->get("cliente");
+            $ListadosDirecciones=$this->db->select()->where('tipo_ajla','Antiguo')->get("franquicia_ajla");
             if ($ListadosDirecciones->num_rows()>0){
                return $ListadosDirecciones->result();
                 // print_r($ListadosDirecciones->result());

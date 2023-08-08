@@ -10,30 +10,16 @@
               <td>DIRECIONES GENERAL </td>
             </tr>
             <tr>
-              <td><img src="<?php echo base_url();?>assets/imagen/ico1.png" alt="foto" height="60px" width="60px">
-                ECUADOR
+              <td><img src="<?php echo base_url();?>assets/imagen/kfc.png" alt="foto" height="60px" width="60px">
+                nuevo
               </td>
             </tr>
             <tr>
-              <td><img src="<?php echo base_url();?>assets/imagen/ico2.png" alt="foto" height="60px" width="60px">
-                ESPAÑA
+              <td><img src="<?php echo base_url();?>assets/imagen/KFC1.jpeg" alt="foto" height="60px" width="60px">
+                antiguas
               </td>
             </tr>
-            <tr>
-              <td><img src="<?php echo base_url();?>assets/imagen/ico3.png" alt="foto" height="60px" width="60px">
-              ESTADOS UNIDOS
-              </td>
-            </tr>
-						<tr>
-							<td><img src="<?php echo base_url();?>assets/imagen/ico4.png" alt="foto" height="60px" width="60px">
-							COLOMBIA
-							</td>
-						</tr>
-						<tr>
-							<td><img src="<?php echo base_url();?>assets/imagen/ico5.png" alt="foto" height="60px" width="60px">
-							PANAMA
-							</td>
-						</tr>
+
           </table>
         </div>
 		</div>
@@ -50,79 +36,35 @@
 			);//mapa
 			// codigo para la creacion de marcadores
       //ECUADOR
-			<?php if ($ecuadores): ?>
-          <?php foreach ($ecuadores as $temporal):?>
+			<?php if ($nuevos): ?>
+          <?php foreach ($nuevos as $temporal):?>
           //para que no salga un mapa encima de otro
-          var coordenada=new google.maps.LatLng(<?php echo $temporal->latitud_cli; ?>,
-            <?php echo $temporal->longitud_cli; ?>);
+          var coordenada=new google.maps.LatLng(<?php echo $temporal->latitud_ajla; ?>,
+            <?php echo $temporal->longitud_ajla; ?>);
             var marcador1=new google.maps.Marker({
               //formato de jeyson
               position:coordenada,
-              title:"<?php echo $temporal->nombre_cli;?>",
+              title:"<?php echo $temporal->lugar_ajla;?>",
               map:mapaDireccionGeneral,
-              icon:"<?php echo base_url();?>/assets/imagen/ico1.png"
+              icon:"<?php echo base_url();?>/assets/imagen/kfc.png"
             });
           <?php endforeach; ?>
         <?php endif; ?>
 				//ESPAÑA
-				<?php if ($espanas): ?>
-			      <?php foreach ($espanas as $temporal):?>
+				<?php if ($antiguos): ?>
+			      <?php foreach ($antiguos as $temporal):?>
 			      //para que no salga un mapa encima de otro
-			      var coordenada=new google.maps.LatLng(<?php echo $temporal->latitud_cli; ?>,
-			        <?php echo $temporal->longitud_cli; ?>);
+			      var coordenada=new google.maps.LatLng(<?php echo $temporal->latitud_ajla; ?>,
+			        <?php echo $temporal->longitud_ajla; ?>);
 			        var marcador1=new google.maps.Marker({
 			          //formato de jeyson
 			          position:coordenada,
-			          title:"<?php echo $temporal->nombre_cli;?>",
+			          title:"<?php echo $temporal->lugar_ajla;?>",
 			          map:mapaDireccionGeneral,
-			          icon:"<?php echo base_url();?>/assets/imagen/ico2.png"
+			          icon:"<?php echo base_url();?>/assets/imagen/KFC1.jpeg"
 			        });
 			      <?php endforeach; ?>
 			    <?php endif; ?>
 				//ESTADOS UNIDOS
-				<?php if ($estadoss): ?>
-						<?php foreach ($estadoss as $temporal):?>
-						//para que no salga un mapa encima de otro
-						var coordenada=new google.maps.LatLng(<?php echo $temporal->latitud_cli; ?>,
-							<?php echo $temporal->longitud_cli; ?>);
-							var marcador1=new google.maps.Marker({
-								//formato de jeyson
-								position:coordenada,
-								title:"<?php echo $temporal->nombre_cli;?>",
-								map:mapaDireccionGeneral,
-								icon:"<?php echo base_url();?>/assets/imagen/ico3.png"
-							});
-						<?php endforeach; ?>
-					<?php endif; ?>
-					//COLOMBIA
-					<?php if ($colombias): ?>
-							<?php foreach ($colombias as $temporal):?>
-							//para que no salga un mapa encima de otro
-							var coordenada=new google.maps.LatLng(<?php echo $temporal->latitud_cli; ?>,
-								<?php echo $temporal->longitud_cli; ?>);
-								var marcador1=new google.maps.Marker({
-									//formato de jeyson
-									position:coordenada,
-									title:"<?php echo $temporal->nombre_cli;?>",
-									map:mapaDireccionGeneral,
-									icon:"<?php echo base_url();?>/assets/imagen/ico4.png"
-								});
-							<?php endforeach; ?>
-						<?php endif; ?>
-						//PANAMA
-						<?php if ($panamas): ?>
-								<?php foreach ($panamas as $temporal):?>
-								//para que no salga un mapa encima de otro
-								var coordenada=new google.maps.LatLng(<?php echo $temporal->latitud_cli; ?>,
-									<?php echo $temporal->longitud_cli; ?>);
-									var marcador1=new google.maps.Marker({
-										//formato de jeyson
-										position:coordenada,
-										title:"<?php echo $temporal->nombre_cli;?>",
-										map:mapaDireccionGeneral,
-										icon:"<?php echo base_url();?>/assets/imagen/ico5.png"
-									});
-								<?php endforeach; ?>
-							<?php endif; ?>
-		}//cierre de la clase con la funcion initMap
+					}//cierre de la clase con la funcion initMap
 		</script>

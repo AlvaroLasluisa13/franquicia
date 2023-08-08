@@ -5,7 +5,7 @@
             parent::__construct();
         }
         function obtenerTodosGeneral(){
-            $ListadosDirecciones=$this->db->get("cliente");
+            $ListadosDirecciones=$this->db->get("franquicia_ajla");
             if ($ListadosDirecciones->num_rows()>0){
                return $ListadosDirecciones->result();
                 // print_r($ListadosDirecciones->result());

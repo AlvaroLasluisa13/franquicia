@@ -1,4 +1,4 @@
-		<h1 class="text-center">DIRECCIONES DE LA SUCURSAL DE ECUADOR </h1>
+		<h1 class="text-center">DIRECCIONES NUEVAS </h1>
 		<div class="row">
 			<div class="col-md-12">
 				<div id="mapaEcuador" style="width:100%; height:600px;border:2px solid black;">
@@ -17,17 +17,17 @@
 
 			);//mapa
 			// codigo para la creacion de marcadores
-      <?php if ($ecuadores): ?>
-          <?php foreach ($ecuadores as $temporal):?>
+      <?php if ($nuevos): ?>
+          <?php foreach ($nuevos as $temporal):?>
           //para que no salga un mapa encima de otro
-          var coordenada=new google.maps.LatLng(<?php echo $temporal->latitud_cli; ?>,
-            <?php echo $temporal->longitud_cli; ?>);
+          var coordenada=new google.maps.LatLng(<?php echo $temporal->latitud_ajla; ?>,
+            <?php echo $temporal->longitud_ajla; ?>);
             var marcador1=new google.maps.Marker({
               //formato de jeyson
               position:coordenada,
-              title:"<?php echo $temporal->nombre_cli;?>",
+              title:"<?php echo $temporal->lugar_ajla;?>",
               map:mapaDireccionesEcuador,
-              icon:"<?php echo base_url();?>/assets/imagen/ico1.png"
+              icon:"<?php echo base_url();?>/assets/imagen/kfc.png"
             });
           <?php endforeach; ?>
         <?php endif; ?>
